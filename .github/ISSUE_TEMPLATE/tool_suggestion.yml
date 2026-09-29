@@ -1,0 +1,79 @@
+name: 🛠️ Tool Suggestion
+description: Suggest a tool that's missing from funkmykali
+title: "[Tool]: "
+labels: ["tool-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggesting a tool? Awesome. To help it get added quickly, please fill in as much as you can below.
+
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool name
+      placeholder: "e.g. Certipy"
+    validations:
+      required: true
+
+  - type: input
+    id: tool-link
+    attributes:
+      label: GitHub / official link
+      placeholder: "https://github.com/..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which area of the HTB Penetration Tester Path (or other cert) does this belong to?
+      options:
+        - Reconnaissance / OSINT
+        - Network Enumeration
+        - Web Application
+        - Active Directory
+        - Password Attacks
+        - Privilege Escalation (Linux)
+        - Privilege Escalation (Windows)
+        - Pivoting / Tunneling
+        - Shells / Payloads
+        - Evasion / Obfuscation
+        - Reporting
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should this be included?
+      description: What does it do, and is it referenced in HTB modules, exam reviews, Reddit, Discord, or writeups?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: certs
+    attributes:
+      label: Which certifications is this relevant to?
+      multiple: true
+      options:
+        - HTB CPTS
+        - OSCP
+        - PNPT / PJPT
+        - eJPT / eCPPT
+        - TryHackMe PT1/PT2
+        - Not cert-specific / general use
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues to make sure this hasn't already been suggested
+          required: true
+        - label: This tool is legal to include (not a cracked/pirated tool, not primarily malicious)
+          required: true

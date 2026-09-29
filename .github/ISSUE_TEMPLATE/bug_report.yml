@@ -1,0 +1,80 @@
+name: 🐛 Bug Report
+description: Something in funkmykali.sh failed, errored, or didn't install correctly
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Please check `/var/log/funkmykali.log` first — the exact error is usually there.
+
+  - type: input
+    id: kali-version
+    attributes:
+      label: Kali Linux version / variant
+      description: Run `cat /etc/os-release` and `uname -a`
+      placeholder: "e.g. Kali 2024.3, kali-linux-default, VMware VM"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - VirtualBox VM
+        - VMware VM
+        - QEMU/KVM VM
+        - WSL
+        - Docker container
+        - Bare metal
+        - Cloud (AWS/Azure/DigitalOcean/etc.)
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: step
+    attributes:
+      label: Which STEP failed?
+      description: The script prints "STEP N — ..." headers. Which one errored?
+      placeholder: "e.g. STEP 18 — Ligolo-ng (Pivoting)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the error or unexpected behavior
+      placeholder: Tell us what went wrong
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: false
+
+  - type: textarea
+    id: log-output
+    attributes:
+      label: Relevant log output
+      description: Paste the relevant section from `/var/log/funkmykali.log`. This will be auto-formatted as code.
+      render: shell
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I ran the script with `sudo bash funkmykali.sh`
+          required: true
+        - label: I checked `/var/log/funkmykali.log` before opening this issue
+          required: true
+        - label: I'm on the latest commit of `main` (`git pull` before reporting)
+          required: true

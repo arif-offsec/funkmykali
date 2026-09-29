@@ -1,0 +1,41 @@
+name: ✨ Feature Request
+description: Suggest an improvement that isn't just "add this tool" (use Tool Suggestion for that)
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got an idea to make funkmykali better? Fixes to system configuration, script logic, or new capabilities all belong here.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Is your feature request related to a problem you ran into?
+      placeholder: "e.g. The script doesn't handle ARM64 Kali installs well for..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any other approaches you thought about
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues to make sure this hasn't already been requested
+          required: true

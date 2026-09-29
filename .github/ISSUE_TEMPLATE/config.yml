@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 General Question / Discussion
+    url: https://github.com/arif-offsec/funkmykali/discussions
+    about: Ask a question or start a discussion instead of opening an issue
+  - name: 🔒 Report a Security Vulnerability
+    url: https://github.com/arif-offsec/funkmykali/security/advisories/new
+    about: Please do NOT report security issues as public issues — use this private channel instead
