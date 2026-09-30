@@ -274,7 +274,6 @@ Tools sourced from:
 - Reddit (`r/hackthebox`, `r/oscp`, `r/netsec`, `r/tryhackme`)
 - Medium / InfoSec write-ups and CPTS exam reviews (2024–2026)
 - Community cheatsheets and GitHub repos
-- [pimpmykali](https://github.com/Dewalt-arch/pimpmykali) — system fix inspiration
 
 ---
 
